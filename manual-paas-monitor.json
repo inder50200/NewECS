@@ -1,0 +1,33 @@
+{
+  "family": "manual-paas-monitor",
+  "containerDefinitions": [
+    {
+      "volumesFrom": [],
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 1337
+        }
+      ],
+      "command": [],
+      "environment": [
+        {
+          "name": "RELEASE",
+          "value": "v3"
+        },
+        {
+          "name": "MESSAGE",
+          "value": "Native ECS Command Line Deployment"
+        }
+      ],
+      "links": [],
+      "mountPoints": [],
+      "essential": true,
+      "memory": 256,
+      "name": "paas-monitor",
+      "cpu": 100,
+      "image": "mvanholsteijn/paas-monitor"
+    }
+  ],
+  "volumes": []
+}
